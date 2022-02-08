@@ -37,4 +37,4 @@
 a = input("请输入a的值")
 b = input("请输入b的值")
 print("字符串a+b=",len(a)+len(b))
-
+print("修改了代码")
