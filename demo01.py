@@ -61,34 +61,56 @@
 
 
 #数组          
-from this import d
-
-
-a = [1,2,3,"哈哈",True,False,"哈哈"] #套娃、下标取值和元组一致
-  
+# a = [1,2,3,"哈哈",True,False,"哈哈"] #套娃、下标取值和元组一致  
 #元组一旦写好后不可以修改，而数组是可以修改的
-a.append("添加1")   # append 往数组里添加新数据 默认添加在最后  只能装一个
-a.append("添加2")
-a.insert(3,4)       # insert 在对应下标3的值的前面插入新的数据4
-print(a)
-a.pop(2)               # pop 剪切  把数组的值拿到别的地方去用
-print(a)               # 取完之后打印数组a 下标为2的数据就不见了 
-b = a.pop(2)           # 剪切最新的元组a中下标为2的数据并赋值给变量b
-c = a.pop(1)
-print(a)
-d = a[0]
-print(b+c+d)
+# a.append("添加1")   # append 往数组里添加新数据 默认添加在最后  只能装一个
+# a.append("添加2")
+# a.insert(3,4)       # insert 在对应下标3的值的前面插入新的数据4
+# print(a)
+# a.pop(2)               # pop 剪切  把数组的值拿到别的地方去用
+# print(a)               # 取完之后打印数组a 下标为2的数据就不见了 
+# b = a.pop(2)           # 剪切最新的元组a中下标为2的数据并赋值给变量b
+# c = a.pop(1)
+# print(a)
+# d = a[0]
+# print(b+c+d)
 #a.clear()              #清空数组
-i = ["extend01","extend02"]   
-a.extend(i)            # extend是合并数组的作用 用的也比较少  通过 + 也可以合并数组
-print(a)
-j = a
-print(j+i)             # 打印出数组 j + i 一起的值   
-o = i+a                # 变量o 等于数组 i + a  也成了一个数组是数组i+a的合集
-print(o)
-a.remove("哈哈")       # remove 是移除数组中的数据
-print(a)
+# i = ["extend01","extend02"]   
+# a.extend(i)            # extend是合并数组的作用 用的也比较少  通过 + 也可以合并数组
+# print(a)
+# j = a
+# print(j+i)             # 打印出数组 j + i 一起的值   
+# o = i+a                # 变量o 等于数组 i + a  也成了一个数组是数组i+a的合集
+# print(o)
+# a.remove("哈哈")       # remove 是移除数组中的数据
+# print(a)
 #在操作数组和元组时下标不要超出范围  否则视为越界 
 #所有的方法都是小括号结尾
 #元组数组字典的取值都是用中括号比如 a[0]
 
+
+#字典
+'''字典的特点
+1.字典中的值没有顺序
+2.字典的结构必须是 键值对    key:value
+'''
+a = {"name":"张三"}  #key是name valve是张三
+b = {"name":"李四","sex":"男","age":"23"}
+print(a,b)          #字典不能相加
+print(b["name"])    #字典的取值不是输入下标 是通过Key取valve 
+#新增
+b["high"] = "178cm"  #新增值使用中括号
+print([b])
+#修改
+b["name"] = "赵云"   #输入已有的key 赋予新的Value
+print([b])
+#get 取值  pop剪切走
+d = b.get("name")    #变量d 取字典b中的name的value值
+print(d)
+e = b.pop("name")
+print(b)
+print(e)
+#修改 update  添加  和上面新增的效果一致
+b.update(age=26)
+b.update(name="司马懿")
+print(b)
