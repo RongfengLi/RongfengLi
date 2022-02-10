@@ -39,6 +39,10 @@
 # print("字符串a+b=",len(a)+len(b))
 # print("修改了代码")
 
+
+#--------------------------------
+
+
 #元组
 # a = () #空元组
 # b = (1,2,3,"哈哈",True,False,"哈哈")
@@ -59,6 +63,8 @@
 # print(b[3:])   #取3到最后
 # print(b[:3])   #取开始到2 
 
+
+#--------------------------------
 
 #数组          
 # a = [1,2,3,"哈哈",True,False,"哈哈"] #套娃、下标取值和元组一致  
@@ -88,29 +94,51 @@
 #所有的方法都是小括号结尾
 #元组数组字典的取值都是用中括号比如 a[0]
 
+#--------------------------------
 
 #字典
 '''字典的特点
 1.字典中的值没有顺序
 2.字典的结构必须是 键值对    key:value
+3.字段的取值是通过Key去取value
 '''
-a = {"name":"张三"}  #key是name valve是张三
-b = {"name":"李四","sex":"男","age":"23"}
-print(a,b)          #字典不能相加
-print(b["name"])    #字典的取值不是输入下标 是通过Key取valve 
+# a = {"name":"张三"}  #key是name valve是张三
+# b = {"name":"李四","sex":"男","age":"23"}
+# print(a,b)          #字典不能相加
+# print(b["name"])    #字典的取值不是输入下标 是通过Key取valve 
 #新增
-b["high"] = "178cm"  #新增值使用中括号
-print([b])
+# b["high"] = "178cm"  #新增值使用中括号
+# print([b])
 #修改
-b["name"] = "赵云"   #输入已有的key 赋予新的Value
-print([b])
+# b["name"] = "赵云"   #输入已有的key 赋予新的Value
+# print([b])
 #get 取值  pop剪切走
-d = b.get("name")    #变量d 取字典b中的name的value值
-print(d)
-e = b.pop("name")
-print(b)
-print(e)
-#修改 update  添加  和上面新增的效果一致
-b.update(age=26)
-b.update(name="司马懿")
-print(b)
+# d = b.get("name")    #变量d 取字典b中的name的value值
+# print(d)
+# e = b.pop("name")
+# print(b)
+# print(e)
+#修改 update  添加  和上面新增的效果一致  如果Key存在那就修改如果不存在那就新增
+# b.update(age=26)
+# b.update(name="司马懿")  #这里的name相当于变量 所以不需要加引号
+# print(b)
+#删除   数字和字段才可以删除  del是通用的删除方法
+# del b["name"]     #删除字典中key是name的值
+# print(b)
+# f = [1,2,3,4,5,6]
+# del f[2]           #删除数组中下标为2的值
+# print(f,f.index(2))
+
+#联系 获取用户的个人信息 姓名 性别 年龄并存储到字典中 
+
+方法一 
+# a = input("请输入你的姓名:")
+# b = input("请输入你的性别:")
+# c = int(input("请输入你的年龄:"))
+# d = {}
+# d.update(name=a,sex=b,age=c)
+# print(d)
+
+方法二
+# d = {"name":input("请输入你的姓名:"),"sex":input("请输入你的性别:"),"age":input("请输入你的年龄:")}
+# print(d)
