@@ -137,14 +137,56 @@
 #     print(i) 
 
 #用for循环来实现while的习题
-student = ("张一","张二","张三","张四","张五","张六","张七","张八","张九","张十") #先把所有人放元组中
-pa = {}   #用来放成绩大于等于60的人  人名+成绩 当然用字典啦
-fi = {}   #用来放成绩小于60的人
-for i in student:  #元组 student 有几个值就循环几次
-    f = float(input("请输入"+i+"的成绩:"))    #输入每个人的成绩    字符串拼接用 + 
-    if f >= 60:          #判断分数
-        pa[i] = f          #满足条件就新增到字典中
+# student = ("张一","张二","张三","张四","张五","张六","张七","张八","张九","张十") #先把所有人放元组中
+# pa = {}   #用来放成绩大于等于60的人  人名+成绩 当然用字典啦
+# fi = {}   #用来放成绩小于60的人
+# for i in student:  #元组 student 有几个值就循环几次
+#     f = float(input("请输入"+i+"的成绩:"))    #输入每个人的成绩    字符串拼接用 + 
+#     if f >= 60:          #判断分数
+#         pa[i] = f          #满足条件就新增到字典中
+#     else:
+#         fi[i] = f
+# print("成绩大于等于60的人",pa)
+# print("成绩小于60的人",fi)
+
+#python 99乘法表
+
+# for i in range(1,10):            #从1到就9 总共循环9次  
+#     for j in range(1,i+1):       #控制每次大循环时小循环的次数 例如当I循环到3时 对应I就要循环3次(1,4)就是三次  
+#         print(i,"x",j,"=",i*j,end="  ")   #这里end主要是用来控制不换行,并且结果之之间可以设置内容  
+#     print()                              #这个空的print里面没有end 这样第一个for循环结束之后就会换行了
+#
+#反过来
+# for i in range(9,0,-1):
+#     for j in range(1,i+1):
+#         print(i,"x",j,"=",i*j,end="  ") 
+#     print()
+
+#练习1：
+#模拟一个红绿灯功能 注意:红灯30次 黄灯3次 绿灯35次  
+
+# light = {"红灯":30,"绿灯":35,"黄灯":3}
+# while True:                                   #搞个死循环一直倒计时
+#     for i in light:
+#         for j in range(light[i]):
+#             print(i+"倒计时还有",light[i]-j,"秒")
+
+# #练习2:
+# #实现一个注册功能  用户名  密码    用户名必须5~8位  密码必须6~12位  并且账号必须小写开头
+
+username = input("请输入5~8位首字母小写的用户名:")
+password = input("请输入6~12位的密码:")
+file = {}
+if len(username) >= 5 and len(username)<= 8:
+    if username [0] in "qwertyuiopasdfghjklzxcvbnm":
+        if len(password) >=8 and len(password) <= 12:
+            file["username"] = username
+            file["password"] = password
+            print("注册成功")
+        else:
+            print("密码长度不对")
     else:
-        fi[i] = f
-print("成绩大于等于60的人",pa)
-print("成绩小于60的人",fi)
+        print("账号必须小写字母开头")        
+else:
+    print("用户名长度不对")
+
