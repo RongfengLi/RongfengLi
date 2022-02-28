@@ -174,19 +174,31 @@
 # #练习2:
 # #实现一个注册功能  用户名  密码    用户名必须5~8位  密码必须6~12位  并且账号必须小写开头
 
-username = input("请输入5~8位首字母小写的用户名:")
-password = input("请输入6~12位的密码:")
-file = {}
-if len(username) >= 5 and len(username)<= 8:
-    if username [0] in "qwertyuiopasdfghjklzxcvbnm":
-        if len(password) >=8 and len(password) <= 12:
-            file["username"] = username
-            file["password"] = password
-            print("注册成功")
-        else:
-            print("密码长度不对")
-    else:
-        print("账号必须小写字母开头")        
-else:
-    print("用户名长度不对")
+# username = input("请输入5~8位首字母小写的用户名:")
+# password = input("请输入6~12位的密码:")
+# file = {}
+# if len(username) >= 5 and len(username)<= 8:
+#     if username [0] in "qwertyuiopasdfghjklzxcvbnm":   #判断首字符是否再26个小写字母里面
+#         if len(password) >=8 and len(password) <= 12:
+#             file["username"] = username
+#             file["password"] = password
+#             print("注册成功")
+#         else:
+#             print("密码长度不对")
+#     else:
+#         print("账号必须小写字母开头")        
+# else:
+#     print("用户名长度不对")
+
+#跳过本次循环 continue
+# for i in range(0,10):
+#    if i == 4:
+#       continue   #跳过本次循环  不会执行下面的代码
+#    print(i)
+
+#终止循环 break
+# for i in range(0,10):
+#    if i == 4:
+#       break   #只能终止一层循环  对嵌套的循环需要层层跳出
+#    print(i)
 
