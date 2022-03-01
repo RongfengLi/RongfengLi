@@ -59,18 +59,58 @@
 
 
 
-#try + except 异常捕获   可用于自动化脚本断言
-try:
-    print("a"+y)
-except:
-    print("上面的代码写错了")
+# #try + except 异常捕获   可用于自动化脚本断言
+# try:
+#     print("a"+y)
+# except:
+#     print("上面的代码写错了")
 
-try:
-    print(a*b)
-except Exception as e:   #Exception 就是把报错信息赋值给变量e并打印出来
-    print("上面的代码写错了",e)
-
-#报错信息就是从异常类来的
-# 包》类》方法》变量
+# try:
+#     print(a*b)
+# except Exception as e:   #Exception 就是把报错信息赋值给变量e并打印出来
+#     print("上面的代码写错了",e)
 
 
+
+# a = input("请输入你的姓名:")
+# b = input("请输入你的年龄:")
+# try:
+#     if int(b) >= 18:
+#         print(a,"你已经是成年人了")
+#     else:
+#         print(a,"你尚未成年")
+# except:
+#     print("年龄必须为数字")        #如果输入的是非数字时 异常提示
+
+# #处理用户输入的数据
+
+
+
+#代码的单位
+#  包   系统自带的和第三方的
+#  模块    多个模块组成一个包   XXX.py的文件都是块
+#  类   
+#  方法   
+#  变量
+
+#用import进行包的导入
+
+from re import A, T
+import time   #导入包  等待时间
+import random  #随机数
+
+# for i in range(0,9):
+#     time.sleep(1)    #使用time的这个包  等待 一般我们用在自动化脚本里等待页面加载    
+#     print(i)
+# a = random.randint(1,35)  #变量a 为0~35的随机数
+# print(a)
+
+c = [[0],[1],[2],[3],[4]]
+for i in range(0,5):
+    for j in range(0,7):
+        if j >= 5:
+            a = random.randint(1,12)
+        else:
+            a = random.randint(1,35)
+        print(a,end=" ")
+    print()
