@@ -93,11 +93,10 @@
 #  方法   
 #  变量
 
-#用import进行包的导入
+#用import进行包的导入   
 
-from re import A, T
-import time   #导入包  等待时间
-import random  #随机数
+# import time   #导入包  等待时间
+# import random  #随机数
 
 # for i in range(0,9):
 #     time.sleep(1)    #使用time的这个包  等待 一般我们用在自动化脚本里等待页面加载    
@@ -105,12 +104,22 @@ import random  #随机数
 # a = random.randint(1,35)  #变量a 为0~35的随机数
 # print(a)
 
-c = [[0],[1],[2],[3],[4]]
-for i in range(0,5):
-    for j in range(0,7):
-        if j >= 5:
-            a = random.randint(1,12)
-        else:
-            a = random.randint(1,35)
-        print(a,end=" ")
-    print()
+# for i in range(0,5):
+#     for j in range(0,7):
+#         if j >= 5:
+#             a = random.randint(1,12)
+#         else:
+#             a = random.randint(1,35)
+#         print(a,end=" ")
+#     print()
+
+#包的下载   pip install 包名     卸载pip uninstall  包名     pip list 查看安装了哪些第三方的包
+#常用的第三方的包   pymysql    selenium（web自动化）    appium（app自动化）    
+# requests(接口自动化)    xlrd（做excle表）  xlwt（读取excle的包）
+
+# import pymysql
+# db = pymysql.Connect(host="127.0.0.1",user="root",password="123456",db="test")  #链接数据库服务器
+# cur = db.cursor()
+# cur.execute("select * from t_class;")
+# res = cur.fetchall()
+# print(res)
