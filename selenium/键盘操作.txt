@@ -1,0 +1,8 @@
+方法  send_keys()
+
+
+# Ctrl + a 全选
+send_keys(Keys.CONTROL,"a")
+
+# BACKSPACE 删除
+send_keys(Keys.BACKSPACE)

@@ -1,0 +1,5 @@
+1.通过 select 元素创建Select对象
+2.通过Select 对象的方法选出选项
+    select_by_index() 根据option索引来定位 从0开始
+    select_by_value() 根据option属性 value值来定位
+    select_by_visble_text() 根据option显示文本来定位

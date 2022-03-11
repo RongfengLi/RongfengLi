@@ -1,0 +1,12 @@
+#游览器操作
+
+#  maximize_window()    全屏
+#  set_window_size(width,height) 设置游览器宽、高
+#  set_window_position(x,y)设置游览器位置，游览器左上角相对于屏幕左上角位置
+#  back() 后退
+#  forward()  前进
+#  refresh()  刷新
+#  close()    关闭当前页面
+#  quit()     关闭游览器
+#  title()    获取页面title
+#  current_url    获取当前页面URL

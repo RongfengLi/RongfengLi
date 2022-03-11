@@ -1,0 +1,24 @@
+1.创建 ActionChains 对象
+2.使用 ActionChains 对象的方法进行操作
+
+from selenium.webdriver.common.action_chains import ActionChains
+action = ActionChains(driver)
+
+#右击操作
+context_click
+action.context_click(driver.find_element_by_class_name('back-logo'))
+#事件的操作必须要执行
+action.perform()
+
+#鼠标悬停
+move_to_element()
+action.move_to_element(driver.find_element_by_xpath('//img[@class=" el-dropdown-selfdefine"]'))
+#事件的操作必须要执行
+action.perform()
+
+
+#鼠标拖拽
+action = ActionChains(driver)
+action.drag_and_drop(位置1,位置2)  #拖拽过程中没有中间过程  
+#事件的操作必须要执行
+action.perform()
